@@ -1,6 +1,6 @@
 Name:		arpage
 Version:	0.2
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	A JACK MIDI arpeggiator
 
 Group:		Applications/Multimedia
@@ -46,6 +46,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Apr 11 2010  Adam Huffman <bloch@verdurin.com> - 0.2-3
+- add desktop file
+- specify icon
+
 * Wed Apr  7 2010 Adam Huffman <bloch@verdurin.com> - 0.2-2
 - fix directory ownership
 - add desktop file infrastructure
