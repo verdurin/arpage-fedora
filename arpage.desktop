@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=arpage
+GenericName=JACK MIDI Arpeggiator
+Comment=JACK MIDI Arpeggiator
+Exec=arpage
+Icon=volume-knob.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Midi;X-Jack
