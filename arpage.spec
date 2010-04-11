@@ -43,7 +43,7 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/zonage
 %{_datadir}/%{name}/
-
+%{_datadir}/applications/%{name}.desktop
 
 %changelog
 * Sun Apr 11 2010  Adam Huffman <bloch@verdurin.com> - 0.2-3
