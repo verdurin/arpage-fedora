@@ -1,6 +1,6 @@
 Name:		arpage
 Version:	0.2
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	A JACK MIDI arpeggiator
 
 Group:		Applications/Multimedia
@@ -13,6 +13,9 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:	jack-audio-connection-kit-devel
 BuildRequires:	gtkmm24-devel intltool
 BuildRequires:	desktop-file-utils
+
+# Until a custom icon is available
+Requires:	echo-icon-theme
 
 %description
 
@@ -43,9 +46,13 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/zonage
 %{_datadir}/%{name}/
-
+%{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Sat May  1 2010 Adam Huffman <bloch@verdurin.com> - 0.2-4
+- add .desktop file to files section
+- add Echo icon theme to requires
+
 * Sun Apr 11 2010  Adam Huffman <bloch@verdurin.com> - 0.2-3
 - add desktop file
 - specify icon
