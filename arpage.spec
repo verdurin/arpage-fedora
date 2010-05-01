@@ -5,7 +5,7 @@ Summary:	A JACK MIDI arpeggiator
 
 Group:		Applications/Multimedia
 License:	GPLv3
-URL:		http://arpage.sourceforge.net
+URL:		http://arpage.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -20,7 +20,7 @@ Requires:	echo-icon-theme
 %description
 
 A GTK application that runs up to 4 arpeggiators on incoming MIDI
-data, synchronised to JACK.
+data, synchronized to JACK.
 
 %prep
 %setup -q
@@ -36,6 +36,8 @@ make install DESTDIR=%{buildroot} arpagedocdir=%{_defaultdocdir}/%{name}-%{versi
 
 desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications %{SOURCE1}
 
+# fix debuginfo error
+chmod 644 src/main.cc
 %clean
 rm -rf %{buildroot}
 
@@ -52,6 +54,7 @@ rm -rf %{buildroot}
 * Sat May  1 2010 Adam Huffman <bloch@verdurin.com> - 0.2-4
 - add .desktop file to files section
 - add Echo icon theme to requires
+- spelling fix
 
 * Sun Apr 11 2010  Adam Huffman <bloch@verdurin.com> - 0.2-3
 - add desktop file
